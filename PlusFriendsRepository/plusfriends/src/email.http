@@ -1,6 +1,0 @@
-@host = http://localhost:8080/plusFriends/email-send-usuario-cadastrado/lnovais833@gmail.com/Lucas
-
-###
-
-
-{{host}}
