@@ -1,3 +1,10 @@
+/*
+ * Class: Pessoa.java
+ * Created: 06/12/2021
+ * Created by: Lucas da Silva Novais
+ * Rights Reserved: PlusFriends
+ */  
+
 package br.com.project.plusfriends.model;
 
 import java.sql.Date;
@@ -11,6 +18,11 @@ import javax.persistence.Table;
 import jdk.jfr.Name;
 import lombok.Data;
 
+
+/**
+ * @version 1.0
+ * @author Lucas da Silva Novais
+ */
 @Entity
 @Table
 @Data

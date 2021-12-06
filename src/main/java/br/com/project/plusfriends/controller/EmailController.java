@@ -1,3 +1,10 @@
+/*
+ * Class: EmailController.java
+ * Created: 06/12/2021
+ * Created by: Lucas da Silva Novais
+ * Rights Reserved: PlusFriends
+ */  
+
 package br.com.project.plusfriends.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +23,27 @@ import org.springframework.http.ResponseEntity;
 import javax.mail.internet.MimeMessage;
 
 
+
+/**
+ * @version 1.0
+ * @author Lucas da Silva Novais
+ */
 @EnableAutoConfiguration
 @RestController
 public class EmailController {
 
     @Autowired private JavaMailSender mailSender;
 
+
+
+    /**
+     * API path = "/email-send-usuario-cadastrado/{emailUsuario}/{nomeUsuario}" 
+     * Utilizada como GET, envia e-mail para o usuário após concluir o cadastro
+     * @param  emailUsuario email do usuário que foi cadastrado no sistema
+     * @param  nomeUsuario nome do usuário que foi cadastrado no sistema
+     * @return retorna a confirmação se o e-mail foi ou não enviado ao usuário  ResponseEntity.ok("Email enviado com sucesso");
+     * @since 11.0
+     */
     @CrossOrigin
     @GetMapping(path = "/email-send-usuario-cadastrado/{emailUsuario}/{nomeUsuario}")
     public ResponseEntity<?> findUsuarioSenha(@PathVariable String emailUsuario,@PathVariable String nomeUsuario){

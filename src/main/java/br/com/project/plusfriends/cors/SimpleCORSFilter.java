@@ -1,3 +1,10 @@
+/*
+ * Class: SimpleCORSFilter.java
+ * Created: 06/12/2021
+ * Created by: Lucas da Silva Novais
+ * Rights Reserved: PlusFriends
+ */  
+
 package br.com.project.plusfriends.cors;
 
 import java.io.IOException;
@@ -13,15 +20,33 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+
+/**
+ * @version 1.0
+ * @author Lucas da Silva Novais
+ */
 @Component
 public class SimpleCORSFilter implements Filter {
 
 private final Logger log = LoggerFactory.getLogger(SimpleCORSFilter.class);
 
+
+
+/**
+ * Utilizada para informar nos logs o inicio do SimpleCORSFilter
+ * @since 11.0
+ */
 public SimpleCORSFilter() {
     log.info("SimpleCORSFilter init");
 }
 
+
+
+/**
+ * Utilizada para dar as permissões para acessar as APIs
+ * @param  registry dados de permissão da aplicação
+ * @since 11.0
+ */
 @Override
 public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
 
